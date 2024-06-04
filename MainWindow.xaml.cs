@@ -19,6 +19,26 @@ namespace Week_9_Enumerables_and_images
         public MainWindow()
         {
             InitializeComponent();
+            FillComboBox();
+
+
+
+            
+        }//MainWindow
+
+
+        public void FillComboBox()
+        {
+            Art nighthawks = new Art("Nighthawks", Art.STYLE.Impressionism);
+
+
+            runDisplay.Text = nighthawks.ToString();
+
+            //controlName.ItemsSource = Enum.GetValues(typeof(enumName)).Cast<enumName>().ToList();
+
+            cmbStyles.ItemsSource =
+                Enum.GetValues<Art.STYLE>().Cast<Art.STYLE>().ToList();
         }
+
     }
 }
